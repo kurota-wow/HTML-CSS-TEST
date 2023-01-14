@@ -1,0 +1,485 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin: 0;
+}
+button {
+  border-radius: 30px;
+  opacity: 0.95;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+.orange {
+  background: rgb(255, 145, 0);
+  color: #fff;
+  border: none;
+}
+button:hover {
+  opacity: 0.7;
+  transition: opacity .4s;
+}
+.container {
+  max-width: 1140px;
+  height: max-content;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+header img {
+  width: 190px;
+  height: 19px;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+header .headerLogo {
+  transition: opacity .3s;
+}
+header .headerLogo:hover {
+  opacity: .8;
+  transition: opacity .3s;
+}
+header nav {
+  margin-left: auto;
+  margin-right: 35px;
+  height: 100%;
+}
+header nav ul {
+  display: flex;
+  padding: 0;
+}
+header ul li {
+  text-align: center;
+  padding: 0 23px;
+}
+header ul li a {
+  opacity: .9;
+}
+header ul li a:hover {
+  opacity: .7;
+  transition: opacity .3s;
+}
+header li a p:nth-child(2) {
+  font-size: 8px;
+}
+header li a p.bold {
+  font-size: 13px;
+  font-weight: bold;
+}
+header button {
+  font-size: 12px;
+  padding: 11px 19px;
+}
+
+/* main */
+main .container{
+  margin-top: 20px;
+}
+.firstView {
+  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  height: 500px;
+}
+.mainContents {
+  width: 500px;
+  text-align: center;
+  padding: 10px 50px;
+}
+.mainContents h1 {
+  font-size: 38px;
+}
+.mainContents .mainImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0 20px;
+  width: 100%;
+}
+.mainContents img {
+  margin-right: 10px;
+}
+.mainContents button.orange {
+  font-size: 15px;
+  padding: 20px 48px;
+  margin-right: 13px;
+}
+.mainContents button.white {
+  font-size: 15px;
+  padding: 20px 25px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.maintext {
+  font-size: 12.5px;
+  color: #c6c6c6;
+  margin: 50px 60px 0;
+}
+.mainImage .image2 {
+  width: 200px;
+}
+/* section */
+
+.about {
+  background: rgb(255, 145, 0);
+}
+.about .container {
+  display: flex;
+  padding: 35px;
+  justify-content: center;
+}
+video {
+  width: 48%;
+  display: block;
+}
+.about .description {
+  color: #fff;
+  margin-left: 40px;
+  width: 45%;
+  letter-spacing: 1px;
+}
+.about .description h2{
+  font-size: 40px;
+  margin: 0;
+}
+.about .description p{
+  font-size: 15px;
+  margin-top: 10px;
+}
+.about .description a {
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.description img.arrowIcon {
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  padding-bottom: 5px;
+}
+
+.bottom {
+  height: 900px;
+}
+
+/* sp-menu */
+
+.sp-menu {
+  display: none;
+}
+
+#open,
+#close {
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+.modal {
+  display: none;
+}
+.hero {
+  display: none;
+}
+.sp-maintext {
+  display: none;
+}
+.fixedButton img {
+  width: 367px;
+  height: 90px;
+  position: fixed;
+  right: 5px;
+  bottom: 27px;
+}
+
+/* pc */
+@media screen and (max-width: 1080px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 60px;
+    z-index: 3;
+  }
+  .pc-menu {
+    display: none;
+  }
+  .sp-menu {
+    display: block;
+  }
+  main {
+    margin-top: 60px;
+  }
+  .modal.show{
+    transform: none;
+    transition: transform .7s;
+  }
+  .modal {
+    display: block;
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: translateX(1500px);
+    transition: transform .7s;
+    outline: 2px solid wheat;
+  }
+  .modal nav{
+    color: #fff;
+    outline: 2px solid cadetblue;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    padding-right: 25px;
+  }
+  .modal ul li {
+    padding: 22px;
+  }
+  .modal li a:hover{
+    opacity: .7;
+    transition: opacity .4s;
+  }
+  .modal .english {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding-bottom: 7px;
+  }
+  .modal .japanese {
+    font-size: 13px;
+    color: rgb(255, 145, 0);
+    letter-spacing: 1px;
+  }
+  .modal button {
+    padding: 20px;
+    width: 260px;
+    font-size: 16px;
+    margin-left: 30px;
+  }
+  .hide {
+    display: none;
+  }
+  .firstView {
+    padding-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mainContents {
+    margin: 0;
+  }
+  .about .container{
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  video {
+    width: 73%;
+    margin-right: 10px;
+  }
+  .about .description {
+    width: 73%;
+    margin-top: 10px;
+    margin-right: 40px;
+  }
+  .about .description h2{
+    font-size: 39px;
+    letter-spacing: 2px;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 767px) {
+  header {
+    height: 50px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin: 0;
+  }
+  .modal {
+    top: 50px;
+  }
+  main {
+    margin-top: 0;
+  }
+  main .container {
+    position: relative;
+  }
+  .firstView {
+    padding: 0;
+    margin: 0;
+    background-image: none;
+  }
+  header img {
+    width: 160px;
+    height: 16px;
+    top: 10px;
+    left: 15px;
+  }
+  #open,
+  #close {
+    font-size: 43px;
+  }
+  video {
+    width: 107%;
+    margin-left: 10px;
+  }
+  .about .description {
+    width: 105%;
+    margin-top: 10px;
+    margin-right: 55px;
+  }
+  .about .description h2{
+    font-size: 37px;
+  }
+  .hero {
+    display: block;
+    height: fit-content;
+    margin-top: 50px;
+  }
+  .hero img {
+    object-fit: cover;
+    width: 100%;
+  }
+  .mainContents {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 95%;
+    padding: 0 0 0 10px;
+
+  }
+  .mainContents h1 {
+    font-size: 26px;
+  }
+  .mainContents .mainImage {
+    display: flex;
+
+  }
+  .mainContents img + img {
+    margin-left: 10px;
+  }
+  .mainImage .image1 {
+    width: 200px;
+  }
+  .mainImage .image2 {
+    width: 300px;
+  }
+  .mainImage .image3 {
+    width: 200px;
+  }
+  .mainContents button.orange {
+    width: 98%;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .mainContents button.white {
+    display: none;
+  }
+  .maintext {
+    display: none;
+  }
+  .sp-maintext {
+    display: block;
+    text-align: left;
+    width: 92%;
+    margin: 0 auto;
+    font-size: 12px;
+    color: rgb(177, 175, 175);
+    margin-top: 20px;
+  }
+  .about {
+    margin-top: 80%;
+  }
+}
+/* phone */
+@media screen and (max-width: 479px) {
+  .mainContents {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 95%;
+    padding: 0 0 0 10px;
+
+  }
+  .mainContents h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .mainContents .mainImage {
+    width: 100%;
+    justify-content: space-between;
+    
+  }
+  .mainContents img + img {
+    margin-left: 0;
+  }
+  .mainImage .image1 {
+    width: 25%;
+  }
+  .mainImage .image2 {
+    width: 40%;
+  }
+  .mainImage .image3 {
+    width: 25%;
+  }
+  .about .description {
+    padding: 10px;
+  }
+  .about .description h2{
+    font-size: 33px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .fixedBackground {
+    background: rgb(243, 242, 242);
+    height: 16%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .fixedButton img{
+    max-width: 93%;
+    height: auto;
+    position: absolute;
+    top: 1%;
+    right: 3%;
+  }
+}
